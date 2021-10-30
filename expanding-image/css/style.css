@@ -1,0 +1,41 @@
+*{
+    box-sizing:border-box ;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    width: 90vh;
+}
+
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    height: 80vh;
+    cursor: pointer;
+    flex: 0.5;
+    transition: flex 0.7s ease-in;
+    margin: 10px;
+}
+.panel.active{
+    flex: 5;
+}
+
+@media(max-width:480px){
+  .panel:nth-of-type(4){
+      display: none;
+  }
+  .panel:nth-of-type(5){
+      display: none;
+  }
+}
